@@ -25,17 +25,20 @@ public final class InscriptionForm {
         return erreurs;
     }
 
-    public Utilisateur inscrireUtilisateur(HttpServletRequest request ) {
+    public Utilisateur inscrireUtilisateur( HttpServletRequest request ) {
         String email = getValeurChamp( request, CHAMP_EMAIL );
         String motDePasse = getValeurChamp( request, CHAMP_PASS );
         String confirmation = getValeurChamp( request, CHAMP_CONF );
         String nom = getValeurChamp( request, CHAMP_NOM );
+
+        Utilisateur utilisateur = new Utilisateur();
 
         try {
             validationEmail( email );
         } catch ( Exception e ) {
             setErreur( CHAMP_EMAIL, e.getMessage() );
         }
+        utilisateur.setEmail( email );
 
         try {
             validationMotsDePasse( motDePasse, confirmation );
@@ -43,12 +46,14 @@ public final class InscriptionForm {
             setErreur( CHAMP_PASS, e.getMessage() );
             setErreur( CHAMP_CONF, null );
         }
+        utilisateur.setMotDePasse( motDePasse );
 
         try {
             validationNom( nom );
         } catch ( Exception e ) {
             setErreur( CHAMP_NOM, e.getMessage() );
         }
+        utilisateur.setNom( nom );
 
         if ( erreurs.isEmpty() ) {
             resultat = "Succès de l'inscription.";
@@ -56,10 +61,9 @@ public final class InscriptionForm {
             resultat = "Échec de l'inscription.";
         }
 
-        Utilisateur utilisateur = new Utilisateur(email, motDePasse, nom);
-
         return utilisateur;
     }
+
     private void validationEmail( String email ) throws Exception {
         if ( email != null ) {
             if ( !email.matches( "([^.@]+)(\\.[^.@]+)*@([^.@]+\\.)+([^.@]+)" ) ) {

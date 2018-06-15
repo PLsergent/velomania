@@ -16,6 +16,10 @@
         <servlet-name>Deconnexion</servlet-name>
         <servlet-class>com.servlet.Deconnexion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GestionTestJDBC</servlet-name>
+        <servlet-class>com.servlet.GestionTestJDBC</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>form</servlet-name>
@@ -30,5 +34,9 @@
     <servlet-mapping>
         <servlet-name>Deconnexion</servlet-name>
         <url-pattern>/deconnexion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GestionTestJDBC</servlet-name>
+        <url-pattern>/testjdbc</url-pattern>
     </servlet-mapping>
 </web-app>
