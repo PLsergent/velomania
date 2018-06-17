@@ -3,6 +3,7 @@
 
 <html>
 <link href="index.css" rel="stylesheet" type="text/css">
+<h2>Velomania</h2>
 <header class="header">
     <nav class="topnav">
         <a href="/">Accueil</a>
@@ -18,7 +19,7 @@
     <title>Velomania BikeStore</title>
 </head>
 <body>
-
+<img src="fixie.jpg" alt="fixie" width="640" height="425">
 </body>
 <footer class="footer">
     <div class="copyright">
