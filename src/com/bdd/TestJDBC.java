@@ -11,11 +11,10 @@ public class TestJDBC {
     private List<String> messages = new ArrayList<String>();
 
     public List<String> executerTests( HttpServletRequest request ) {
-        public List<String> executerTests( HttpServletRequest request ) {
             /* Chargement du driver JDBC pour MySQL */
             try {
                 messages.add( "Chargement du driver..." );
-                Class.forName( "com.mysql.jdbc.Driver" );
+                Class.forName( "org.mariadb.jdbc.Driver" );
                 messages.add( "Driver chargé !" );
             } catch ( ClassNotFoundException e ) {
                 messages.add( "Erreur lors du chargement : le driver n'a pas été trouvé dans le classpath ! <br/>"
@@ -23,9 +22,9 @@ public class TestJDBC {
             }
 
             /* Connexion à la base de données */
-            String url = "jdbc:mysql://localhost:3306/bdd_sdzee";
-            String utilisateur = "java";
-            String motDePasse = "SdZ_eE";
+            String url = "jdbc:mysql://localhost:3306/velomania";
+            String utilisateur = "root";
+            String motDePasse = "aqmplo31";
             Connection connexion = null;
             Statement statement = null;
             ResultSet resultat = null;
@@ -82,7 +81,4 @@ public class TestJDBC {
 
             return messages;
         }
-
-        return messages;
     }
-}

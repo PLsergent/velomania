@@ -9,7 +9,7 @@
         <a href="form">Inscription</a>
         <a href="">Panier</a>
         <a href="more">A Propos</a>
-        <a href="deconnexion">Déconnexion</a>
+        <a href="deconnexion">Deconnexion</a>
     </nav>
 </header>
 <head>
