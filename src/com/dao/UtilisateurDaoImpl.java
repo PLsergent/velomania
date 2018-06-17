@@ -53,6 +53,20 @@ public class UtilisateurDaoImpl implements UtilisateurDao {
             fermeturesSilencieuses( valeursAutoGenerees, preparedStatement, connexion );
         }
     }
+    /*
+     * Simple méthode utilitaire permettant de faire la correspondance (le
+     * mapping) entre une ligne issue de la table des utilisateurs (un
+     * ResultSet) et un bean Utilisateur.
+     */
+    private static Utilisateur map( ResultSet resultSet ) throws SQLException {
+        Utilisateur utilisateur = new Utilisateur();
+        utilisateur.setId( resultSet.getLong( "id" ) );
+        utilisateur.setEmail( resultSet.getString( "email" ) );
+        utilisateur.setMotDePasse( resultSet.getString( "mot_de_passe" ) );
+        utilisateur.setNom( resultSet.getString( "nom" ) );
+        utilisateur.setDateInscription( resultSet.getTimestamp( "date_inscription" ) );
+        return utilisateur;
+    }
 
     /*
      * Méthode générique utilisée pour retourner un utilisateur depuis la base
@@ -87,19 +101,6 @@ public class UtilisateurDaoImpl implements UtilisateurDao {
         return utilisateur;
     }
 
-    /*
-     * Simple méthode utilitaire permettant de faire la correspondance (le
-     * mapping) entre une ligne issue de la table des utilisateurs (un
-     * ResultSet) et un bean Utilisateur.
-     */
-    private static Utilisateur map( ResultSet resultSet ) throws SQLException {
-        Utilisateur utilisateur = new Utilisateur();
-        utilisateur.setId( resultSet.getLong( "id" ) );
-        utilisateur.setEmail( resultSet.getString( "email" ) );
-        utilisateur.setMotDePasse( resultSet.getString( "mot_de_passe" ) );
-        utilisateur.setNom( resultSet.getString( "nom" ) );
-        utilisateur.setDateInscription( resultSet.getTimestamp( "date_inscription" ) );
-        return utilisateur;
-    }
+
 
 }

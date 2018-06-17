@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class Panier {
     
-    private Produit<ArrayList> produits;
+    private ArrayList<Produit> produits;
 
-    public Produit<ArrayList> getProduits() {
+    public ArrayList<Produit> getProduits() {
         return produits;
     }
 

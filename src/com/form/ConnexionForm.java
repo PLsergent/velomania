@@ -2,8 +2,10 @@ package com.form;
 
 import java.util.HashMap;
 import java.util.Map;
+import com.dao.*;
 
 import javax.servlet.http.HttpServletRequest;
+import org.jasypt.util.password.*;
 
 import com.bean.Utilisateur;
 

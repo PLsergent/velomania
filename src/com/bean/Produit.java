@@ -1,4 +1,4 @@
-package com.bean
+package com.bean;
 
 public class Produit {
 
@@ -17,6 +17,6 @@ public class Produit {
         this.prix = prix;
     }
     public double getPrix() {
-        return prix
+        return prix;
     }
 }

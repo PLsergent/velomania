@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public class Deconnexion extends HttpServlet {
-    public static final String URL_REDIRECTION = "localhost:8080/connexion";
+    public static final String URL_REDIRECTION = "/connexion";
 
     public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
         /* Récupération et destruction de la session en cours */

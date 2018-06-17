@@ -8,6 +8,7 @@ public class Modele {
     public String getReference() {
         return reference;
     }
+
     public void setReference(String reference) {
         this.reference = reference;
     }
@@ -15,6 +16,8 @@ public class Modele {
     public Marque getMarque() {
         return marque;
     }
+
     public void setMarque(Marque marque) {
         this.marque = marque;
     }
+}

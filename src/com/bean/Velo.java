@@ -6,6 +6,8 @@ public class Velo extends Produit {
     public void setModele(Modele modele) {
         this.modele = modele;
     }
+
     public Modele getModele() {
         return modele;
     }
+}

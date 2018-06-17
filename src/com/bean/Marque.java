@@ -7,6 +7,10 @@ public class Marque {
     public void setNom(String nom) {
         this.nom = nom;
     }
+
     public String getNom() {
         this.nom = nom;
+        return nom;
     }
+
+}
