@@ -7,7 +7,7 @@
         <a href="/">Accueil</a>
         <a href="connexion">Connexion</a>
         <a href="form">Inscription</a>
-        <a href ="produit">Produits</a>
+        <a href ="produits">Produits</a>
         <a href="">Panier</a>
         <a href="more">A Propos</a>
         <a href="deconnexion">Deconnexion</a>
@@ -15,13 +15,13 @@
 </header>
 <head>
     <meta charset="utf-8" />
-    <title>Tests JDBC</title>
+    <title>Produits</title>
     <link type="text/css" rel="stylesheet" href="index.css" />
 </head>
 <body>
-<h1>Tests JDBC</h1>
-<c:forEach items="${ messages }" var="message" varStatus="boucle">
-    <p>${ boucle.count }. ${ message }</p>
+<h2>Produits disponibles</h2>
+<c:forEach items="${ produits }" var="produit" varStatus="boucle">
+    <p>${ boucle.count }. ${ produit }</p>
 </c:forEach>
 </body>
 </html>

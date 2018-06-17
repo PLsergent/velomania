@@ -7,6 +7,7 @@
         <a href="/">Accueil</a>
         <a href="connexion">Connexion</a>
         <a href="form">Inscription</a>
+        <a href ="produits">Produits</a>
         <a href="">Panier</a>
         <a href="more">A Propos</a>
         <a href="deconnexion">Deconnexion</a>
