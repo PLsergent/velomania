@@ -21,7 +21,7 @@
 <body>
 <h2>Produits disponibles</h2>
 <c:forEach items="${ produits }" var="produit" varStatus="boucle">
-    <p>${ boucle.count }. ${ produit }</p>
+    <p>${ boucle.count }. ${ produit } Euros</p>
 </c:forEach>
 </body>
 </html>
